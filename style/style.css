@@ -1,0 +1,464 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 56px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+img {
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styling */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo_link {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.header_logo_link:hover {
+  opacity: 0.8;
+}
+
+.header_logo_link:active {
+  opacity: 0.4;
+}
+
+.header_right {
+  margin-left: auto;
+}
+
+.nav_list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav_item:nth-child(2) {
+  position: relative;
+}
+
+.nav_item:nth-child(2):hover .nav_sublist {
+  display: block;
+}
+
+.nav_links {
+  display: inline-block;
+  padding: 16px;
+  padding-bottom: 13px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav_links:hover {
+  border-color: #000000;
+}
+
+.nav_links:active {
+  color: #ffffff;
+  background-color: rgba(25, 25, 25, 0.7);
+}
+
+.nav_sublist {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  z-index: 10;
+  display: none;
+  margin: 0;
+  padding: 8px 0;
+  list-style-type: none;
+  background: #ffffff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transform: translateX(50%);
+}
+
+.nav_sublist_links {
+  display: block;
+  width: 132px;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav_sublist_links:hover {
+  background-color: #00bafc;
+  color: #ffffff;
+}
+
+.nav_sublist_links:active {
+  background-color: #00bafc;
+  opacity: 0.6;
+  color: #ffffff;
+}
+
+.header_tel_link {
+  width: 160px;
+  text-align: center;
+  margin-left: 8px;
+  padding: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #00bafc;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.header_tel_link:hover {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 3px #00bafc;
+  color: #00bafc;
+}
+
+.header_tel_link:active {
+  background-color: #00bafc;
+  opacity: 0.6;
+  color: #ffffff;
+}
+
+/* services section styling */
+
+.services {
+  margin-top: 72px;
+}
+
+.services_heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  color: #000000;
+  text-align: center;
+}
+
+.services_text {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 72px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  text-align: center;
+}
+
+.services_content {
+  padding: 80px 0;
+  background: #f4f4f4;
+}
+
+.services_list {
+  margin: -64px;
+  padding: 0;
+  padding-top: 64px;
+  list-style-type: none;
+}
+
+.services_item {
+  display: flex;
+  width: 804px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+  padding: 32px;
+  background-color: #ffffff;
+}
+
+.services_item::before {
+  display: block;
+  content: "";
+  width: 200px;
+  height: 128px;
+  background-image: url(../img/website-illustration.png);
+  background-size: 200px 128px;
+  background-repeat: no-repeat;
+}
+
+.services_item div {
+  width: 500px;
+  margin-left: 40px;
+}
+
+.services_item_heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000000;
+}
+
+.services_item_text {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.content_list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.content_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.content_item::before {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #00bafc;
+}
+
+.content_button {
+  width: 167px;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #00bafc;
+  border-radius: 5px;
+}
+
+.content_link {
+  margin-left: 16px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #00bafc;
+}
+
+/* Reservation section styling */
+
+.reservation {
+    background: #00bafc;
+  }
+  
+  .reservation .container {
+    padding: 56px;
+  }
+  
+  .reservation_heading {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .reservation_text {
+    width: 719px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .reservation_form {
+    width: 348px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .reservation_input {
+    width: 300px;
+    margin-bottom: 16px;
+    padding: 16px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    background: #f3f3f3;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: inset 0 0 0 3px black;
+  }
+  
+  .reservation_input:focus {
+    box-shadow: inset 0 0 0 3px darkcyan;
+  }
+  
+  .reservation_select {
+    width: 300px;
+    margin-bottom: 16px;
+    padding: 16px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    background: #f3f3f3;
+    border-radius: 5px;
+    border: none;
+    appearance: none;
+    background-image: url(../SVG_images/Group\ 1.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: top 20px right 20px;
+  }
+  
+  /* Foote section styling */
+  
+  .footer {
+    background: #191919;
+    padding: 56px 100px;
+  }
+  
+  .footer .container {
+    display: flex;
+  }
+  
+  .footer_info {
+    width: 320px;
+  }
+  
+  .footer_heading {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    color: #ffffff;
+  }
+  
+  .footer_text{
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  }
+  
+  .footer_left_list {
+    margin: 0;
+    margin-left: 100px;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .left_list_item {
+    margin-bottom: 8px;
+  }
+  
+  .left_item_links {
+    font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  }
+  
+  .right_links_t{
+    display: flex;
+  }
+  
+  .right_links_t::before{
+    display: block;
+    content: '';
+    width: 23px;
+    height: 25px;
+    margin-right: 8px;
+    background-image: url(../SVG_images/telegram.svg);
+    background-repeat: no-repeat;
+    background-size: 23px 25px;
+  }
+  
+  .right_links_f{
+    display: flex;
+  }
+  
+  .right_links_f::before{
+    display: block;
+    content: '';
+    width: 23px;
+    height: 25px;
+    margin-right: 8px;
+    background-image: url(../SVG_images/facebook.svg);
+    background-repeat: no-repeat;
+    background-size: 23px 25px;
+  }
+  
+  .right_links_i{
+    display: flex;
+  }
+  
+  .right_links_i::before{
+    display: block;
+    content: '';
+    width: 23px;
+    height: 23px;
+    margin-right: 8px;
+    background-image: url(../SVG_images/instagram.svg);
+    background-repeat: no-repeat;
+    background-size: 23px;
+  }
